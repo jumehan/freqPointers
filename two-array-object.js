@@ -14,7 +14,7 @@
  * @returns object of keys and values
  */
 function twoArrayObject(keys, values) {
-  let object = new Object();
+  let object = {};
 
   for (let i = 0; i < keys.length; i++) {
     object[keys[i]] = values[i] ? values[i] : null;

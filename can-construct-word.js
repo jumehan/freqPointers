@@ -16,7 +16,7 @@
 function frequencyCounter(iterable) {
   let counts = {};
   for (let item of iterable) {
-    counts[item] ? counts[item]++ : counts[item] = 1;
+    counts[item] = (counts[item] || 0) + 1;
   }
   return counts;
 }
@@ -29,8 +29,8 @@ function canConstructWord(words, letters) {
   if (words.length > letters.length) {
     return false;
   }
-  let wordsCount = frequencyCounter(words);
-  let lettersCount = frequencyCounter(letters);
+  const wordsCount = frequencyCounter(words);
+  const lettersCount = frequencyCounter(letters);
 
   for (let letter in wordsCount) {
     if (!lettersCount[letter]) {
