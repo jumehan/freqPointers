@@ -7,6 +7,12 @@
 //then false, else true
 //output: boolean (T or F)
 
+
+/**
+ * Frequency counter function
+ * @param {*} iterable
+ * @returns object with letters and count of letters in iterable
+ */
 function frequencyCounter(iterable) {
   let counts = {};
   for (let item of iterable) {
@@ -14,7 +20,11 @@ function frequencyCounter(iterable) {
   }
   return counts;
 }
-
+/**
+ * Compares 2 strings (words, letters) and see if words can be made with letters
+ * @param {*} words, letters
+ * @returns true or false
+ */
 function canConstructWord(words, letters) {
   if (words.length > letters.length) {
     return false;
